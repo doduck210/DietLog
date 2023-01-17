@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src='./diet.js'> </script>
+    <title>식단관리</title>
+  </head>
+  <body>
+   	<h1>식단관리</h1>
+
+     <p><label for="date">
+      <input type="date"
+             id="date"
+             max="3000-01-01"
+             min="1000-01-01"
+             value="2001-12-03"
+             onchange="showMenu(value)"> 해당 날의 식사 기록
+      </label></p>
+
+      <ul id="menuList"></ul>
+      <hr>
+
+      <select id="registerTime">
+        <option value="BR">아침</option>
+        <option value="LU" selected>점심</option>
+        <option value="DI">저녁</option>
+        <option value="NI">야식</option>
+        <option value="EX">기타</option>
+      </select>
+      <input type="text" id="registerMenu" maxlength="50" placeholder="메뉴입력">
+      <button onclick="createMenu()">새 기록 등록</button>
+      <hr>
+
+      <!--input type="date" id="dateFrom" max="3000-01-01" 
+        min="1000-01-01" value="2001-12-03" onchange="getRank()"> ~ 
+        <input type="date" id="dateTo" max="3000-01-01" 
+        min="1000-01-01" value="2001-12-03" onchange="getRank()"> 기간중 두번 이상 먹은 메뉴
+        <ul id="rankList"></ul-->
+
+      <script>init();</script>
+  </body>
+</html>
